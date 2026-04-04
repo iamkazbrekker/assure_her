@@ -2,7 +2,8 @@ import { ActionCard } from "@/components/booking"
 import MenuCorner from "@/components/menuDiv"
 import ProfileCorner from "@/components/profileDiv"
 import SOSButton from "@/components/ui/sos"
-import { Bus, Car, Menu, ThumbsUp, User } from "lucide-react"
+import { Bus, Car, ThumbsUp} from "lucide-react"
+import Link from "next/link"
 
 function Page() {
   return (
@@ -31,21 +32,29 @@ function Page() {
         </header>
 
         <main className="flex justify-center items-center min-h-screen flex-col gap-5">
-          <ActionCard
+          <Link href={"/cab"} className="w-full max-w-md">
+            <ActionCard
             title="Cab Booking"
             subtitle="Book Secure Rides"
             icon={<Car />}
           />
+          </Link>
+          
+          <Link href={"/bus"} className="w-full max-w-md">
           <ActionCard
             title="Bus / Metro"
             subtitle="Select Your Route"
             icon={<Bus />}
           />
+          </Link>
+
+          <Link href={"/travel"} className="w-full max-w-md">
           <ActionCard
             title="Free Travel"
             subtitle="Hitchhiking alone?"
             icon={<ThumbsUp />}
           />
+          </Link>
         </main>
 
         <SOSButton />
