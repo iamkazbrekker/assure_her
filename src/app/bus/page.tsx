@@ -36,7 +36,7 @@ export default function BusPage() {
           <Link href="/" className="mr-3 z-50">
             <ArrowLeft className="text-green-800" size={26} />
           </Link>
-          <h1 className="text-xl font-bold text-green-800">Daily Commute</h1>
+          <h1 className="text-xl font-bold text-green-800 flex-1">Daily Commute</h1>
           <CommunityCorner />
         </header>
 
@@ -46,10 +46,10 @@ export default function BusPage() {
             <div className="flex justify-between items-start mb-6">
               <div>
                 <p className="text-sm text-gray-500 font-medium mb-1">Next scheduled</p>
-                <h2 className="text-lg font-bold text-gray-900">Home → Office</h2>
+                <h2 className="text-lg font-bold text-gray-900">College → Railway Station</h2>
               </div>
               <div className="bg-green-200/70 text-green-800 text-[13px] font-bold px-3 py-1 rounded-full">
-                8:30 AM
+                3:30 PM
               </div>
             </div>
             <button
@@ -117,15 +117,13 @@ export default function BusPage() {
               {/* Video Map Container */}
               <div className="w-full aspect-[4/3] bg-black relative shrink-0 shadow-inner pointer-events-none">
                 {/* Embedded YouTube video */}
-                <iframe
-                  src="https://www.youtube.com/embed/Aq5WXmQQooo?si=mr2_mnm4FNJ8uJUT&autoplay=1&mute=1&controls=0&loop=1&playlist=Aq5WXmQQooo"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="w-full h-full opacity-90"
-                />
+                <video
+                src="/v2.mp4"
+                className="w-full h-full object-cover opacity-90"
+                autoPlay
+                muted
+                playsInline
+              />
 
                 {/* Live Indicator */}
                 <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2 shadow-lg z-10">
@@ -146,7 +144,7 @@ export default function BusPage() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Current Location</p>
-                    <p className="text-lg font-bold text-gray-800 leading-tight">Civic Center, Sector 4</p>
+                    <p className="text-lg font-bold text-gray-800 leading-tight">Pimpri Chinchwad College of Engineering and Research</p>
                   </div>
                 </motion.div>
 
@@ -161,7 +159,7 @@ export default function BusPage() {
                   </div>
                   <div>
                     <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">Estimated Arrival</p>
-                    <p className="text-lg font-bold text-gray-800 leading-tight">15 Mins <span className="font-normal text-gray-500 text-[15px]">(8:45 AM)</span></p>
+                    <p className="text-lg font-bold text-gray-800 leading-tight">1 hour 15 Mins <span className="font-normal text-gray-500 text-[15px]">(8:45 AM)</span></p>
                   </div>
                 </motion.div>
 
@@ -173,14 +171,14 @@ export default function BusPage() {
                   className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 mt-2"
                 >
                   <div className="flex justify-between text-sm font-bold text-gray-500 mb-3 px-1">
-                    <span>Home</span>
-                    <span>Office</span>
+                    <span>College</span>
+                    <span>Railway Station</span>
                   </div>
                   <div className="w-full bg-gray-100 h-3 rounded-full overflow-hidden relative">
                     {/* Animated Fill */}
                     <motion.div
                       initial={{ width: "0%" }}
-                      animate={{ width: "45%" }}
+                      animate={{ width: "2%" }}
                       transition={{ duration: 3, delay: 0.5, ease: "easeOut" }}
                       className="absolute left-0 top-0 h-full bg-green-500 rounded-full"
                     />

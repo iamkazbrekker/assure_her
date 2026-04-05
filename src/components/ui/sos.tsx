@@ -109,11 +109,13 @@ export default function SOSButton({
 
                         {/* 👥 Fake Contacts Row */}
                         <div className="flex gap-4 mt-6 z-10">
-                            {[1, 2, 3, 4].map((i) => (
+                            {['M', 'D', 'G', 'S'].map((i) => (
                                 <div
                                     key={i}
-                                    className="w-12 h-12 bg-white/80 rounded-full"
-                                />
+                                    className="w-10 h-10 rounded-full border-2 border-white shadow-sm overflow-hidden flex items-center justify-center bg-yellow-100 text-yellow-700 font-black shrink-0 text-sm"
+                                >
+                                    {i}
+                                </div>
                             ))}
                         </div>
 

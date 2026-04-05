@@ -27,8 +27,7 @@ export default function CabPage() {
           <Link href="/" className="mr-3 p-1 shrink-0">
             <ArrowLeft className="text-green-800" size={26} />
           </Link>
-          <h1 className="text-xl font-bold text-green-800 flex-1">Book exactly what you need</h1>
-          <CommunityCorner />
+          <h1 className="text-xl font-bold text-green-800 flex-1">Cab Booking</h1>
         </header>
 
         <main className="flex flex-col p-5">
@@ -81,7 +80,7 @@ export default function CabPage() {
             <h3 className="text-lg font-bold text-gray-800 mb-4">Saved Places</h3>
             <div className="flex flex-col">
               <div
-                className="flex items-center gap-4 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition"
+                className="flex items-center gap-4 cursor-pointer p-2 rounded-xl transition bg-gray-50 "
                 onClick={() => { setDropoff("Central Mall"); setPickup("Home") }}
               >
                 <div className="p-3 bg-gray-100 rounded-full text-gray-600">
@@ -94,7 +93,7 @@ export default function CabPage() {
               </div>
 
               <div
-                className="flex items-center gap-4 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition mt-2"
+                className="flex items-center gap-4 cursor-pointer bg-gray-50 p-2 rounded-xl transition mt-2"
                 onClick={() => { setDropoff("City Metro Station"); setPickup("Home") }}
               >
                 <div className="p-3 bg-gray-100 rounded-full text-gray-600">
@@ -131,17 +130,15 @@ export default function CabPage() {
 
             {/* Top Map / Video Area */}
             <div className="h-[45vh] w-full bg-black relative shrink-0 shadow-inner pointer-events-none">
-              {/* YouTube Video Placeholder */}
-              <iframe
-                src="https://www.youtube.com/embed/Aq5WXmQQooo?si=mr2_mnm4FNJ8uJUT&autoplay=1&mute=1&controls=0&loop=1&playlist=Aq5WXmQQooo"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full h-full opacity-90"
+              {/* Native Video Stream */}
+              <video
+                src="/v1.mp4"
+                className="w-full h-full object-cover opacity-90"
+                autoPlay
+                muted
+                playsInline
               />
-              <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-white to-transparent" />
             </div>
 
             {/* Bottom Sheet - Ride Options */}
@@ -173,7 +170,7 @@ export default function CabPage() {
                       <p className="text-sm text-gray-500 font-medium mt-0.5">3 min • Dropoff at 4:15 PM</p>
                     </div>
                   </div>
-                  <span className="text-xl font-bold text-gray-900">$12.50</span>
+                  <span className="text-xl font-bold text-gray-900">₹115.50</span>
                 </div>
 
                 {/* Option 2: Rickshaw */}
@@ -190,7 +187,7 @@ export default function CabPage() {
                       <p className="text-sm text-gray-500 font-medium mt-0.5">1 min • Dropoff at 4:20 PM</p>
                     </div>
                   </div>
-                  <span className="text-xl font-bold text-gray-900">$5.00</span>
+                  <span className="text-xl font-bold text-gray-900">₹72.32</span>
                 </div>
 
                 {/* Option 3: Premium */}
@@ -207,7 +204,7 @@ export default function CabPage() {
                       <p className="text-sm text-gray-500 font-medium mt-0.5">6 min • Dropoff at 4:10 PM</p>
                     </div>
                   </div>
-                  <span className="text-xl font-bold text-gray-900">$24.00</span>
+                  <span className="text-xl font-bold text-gray-900">₹164.87</span>
                 </div>
 
               </div>

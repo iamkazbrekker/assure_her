@@ -102,7 +102,7 @@ export default function TravelPage() {
               <ArrowLeft className="text-green-800" size={26} />
             </button>
           )}
-          <h1 className="text-xl font-bold text-green-800 flex-1">Safe Hitchhiking</h1>
+          <h1 className="text-xl font-bold text-green-800 flex-1">Free Travel</h1>
           <CommunityCorner />
         </header>
 

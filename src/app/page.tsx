@@ -27,11 +27,12 @@ function Page() {
       <div className="relative z-10">
         <header className="border-b border-green-700 flex flex-row justify-between p-5 pb-3">
           <ProfileCorner />
-          <img src={"/name.png"} className="h-10 ml-10"/>
+          <img src={"/name.png"} className="h-10 ml-12"/>
           <MenuCorner />
         </header>
 
-        <main className="flex justify-center items-center min-h-screen flex-col gap-5">
+        <main className="flex pb-33 justify-center items-center min-h-screen flex-col gap-7">
+          
           <Link href={"/cab"} className="w-full max-w-md">
             <ActionCard
             title="Cab Booking"
