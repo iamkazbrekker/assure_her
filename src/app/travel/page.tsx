@@ -68,7 +68,7 @@ export default function TravelPage() {
       setIsScanning(false)
       stopCamera() // Shut off camera stream aggressively when done
       setScanResult({
-        plateNumber: "MH 02 ER 9123",
+        plateNumber: "MH 41 BS 9269",
         status: "Data Saved to Log"
       })
     }, 2500)
