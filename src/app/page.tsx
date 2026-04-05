@@ -27,7 +27,7 @@ function Page() {
       <div className="relative z-10">
         <header className="border-b border-green-700 flex flex-row justify-between p-5 pb-3">
           <ProfileCorner />
-          <img src={"/name.png"} className="h-10 ml-12"/>
+          <img src={"/name.png"} className="h-10 ml-8"/>
           <MenuCorner />
         </header>
 
